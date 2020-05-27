@@ -27,9 +27,6 @@ class MuseumTest < MiniTest::Test
     dmns.add_exhibit(gems_and_minerals)
     dmns.add_exhibit(dead_sea_scrolls)
 
-    expected = [{name: 'Gems and Minerals', cost: 0},
-                {name: 'Dead Sea Scrolls', cost: 10}]
-
-    assert_equal expected, dmns.exhibits
+    assert_equal [gems_and_minerals, dead_sea_scrolls], dmns.exhibits
   end
 end
